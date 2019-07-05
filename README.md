@@ -71,11 +71,6 @@ $app->register( ShaoZeMing\LaravelCrypt\CryptServiceProvider::class);
 
 
 ```php
-use MingCrypt;
-
-//第1种
-$result = MingCrypt::::crypt('你知道我对你不仅仅是喜欢');
-print_r($result);
 
 
 
@@ -86,10 +81,12 @@ print_r($result);
 Example:
 
 ```php
+use ShaoZeMing\LaravelCrypt\Facade\Crypt;
+
 $data = ['test'=>123];
 $sign = MingCrypt::sign($data);   //签名
 print_r($sign);
-$check = MingCrypt::signCheck($data,$sign);   //延签
+$check = MingCrypt::signCheck($data,$sign);   //验签
 print_r($check);
 
 $payload =  MingCrypt::encrypt($data);  //加密
