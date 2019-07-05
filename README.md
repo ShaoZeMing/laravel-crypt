@@ -71,7 +71,7 @@ $app->register( ShaoZeMing\LaravelCrypt\CryptServiceProvider::class);
 
 
 ```php
-use Crypt;
+use MingCrypt;
 
 //第1种
 $result = MingCrypt::::crypt('你知道我对你不仅仅是喜欢');
