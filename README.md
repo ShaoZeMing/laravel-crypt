@@ -74,7 +74,7 @@ $app->register( ShaoZeMing\LaravelCrypt\CryptServiceProvider::class);
 use Crypt;
 
 //第1种
-$result = Crypt::crypt('你知道我对你不仅仅是喜欢');
+$result = MingCrypt::::crypt('你知道我对你不仅仅是喜欢');
 print_r($result);
 
 
@@ -86,15 +86,16 @@ print_r($result);
 Example:
 
 ```php
-// 更换翻译服务商
-$result = Crypt::setDriver('baidu')->crypt('你知道我对你不仅仅是喜欢');
-print_r($result);
+$data = ['test'=>123];
+$sign = MingCrypt::sign($data);   //签名
+print_r($sign);
+$check = MingCrypt::signCheck($data,$sign);   //延签
+print_r($check);
 
-// 更换翻译语言 可选语言请看配置文件中可定义的几种
-$from="en";
-$to="zh";
-$result = Crypt::setFromAndTo($from,$to)->crypt('I love you.');
-print_r($result);
+$payload =  MingCrypt::encrypt($data);  //加密
+print_r($payload);
+$data = MingCrypt::decrypt($payload);   //解密
+print_r($data);
 
 ```
 
