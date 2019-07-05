@@ -1,0 +1,43 @@
+{
+    "name": "shaozeming/laravel-crypt",
+    "description": "一个签名/验签，加密解密的laravel/lumen包",
+    "type": "library",
+    "require": {
+        "laravel/framework": "~5.0",
+        "shaozeming/crypt": "^1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.3",
+        "mockery/mockery": "^0.9.9"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "ShaoZeMing",
+            "email": "szm19920426@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "ShaoZeMing\\LaravelCrypt\\": "./src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ShaoZeMing\\LaravelCrypt\\Test\\": "./tests"
+        }
+    },
+
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ShaoZeMing\\LaravelCrypt\\CryptServiceProvider"
+            ],
+            "aliases": {
+                "MingCrypt": "ShaoZeMing\\LaravelCrypt\\Facade\\Crypt"
+            }
+        }
+    },
+    "minimum-stability":"dev"
+
+}
