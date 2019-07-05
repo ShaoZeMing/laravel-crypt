@@ -84,14 +84,14 @@ Example:
 use ShaoZeMing\LaravelCrypt\Facade\Crypt;
 
 $data = ['test'=>123];
-$sign = MingCrypt::sign($data);   //签名
+$sign = Crypt::sign($data);   //签名
 print_r($sign);
-$check = MingCrypt::signCheck($data,$sign);   //验签
+$check = Crypt::signCheck($data,$sign);   //验签
 print_r($check);
 
-$payload =  MingCrypt::encrypt($data);  //加密
+$payload =  Crypt::encrypt($data);  //加密
 print_r($payload);
-$data = MingCrypt::decrypt($payload);   //解密
+$data = Crypt::decrypt($payload);   //解密
 print_r($data);
 
 ```
