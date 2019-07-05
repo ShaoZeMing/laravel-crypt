@@ -3,7 +3,7 @@
     "description": "一个签名/验签，加密解密的laravel/lumen包",
     "type": "library",
     "require": {
-        "laravel/framework": "~5.0",
+        "illuminate/container": "^5.1",
         "shaozeming/crypt": "^1.0"
     },
     "require-dev": {
@@ -34,7 +34,7 @@
                 "ShaoZeMing\\LaravelCrypt\\CryptServiceProvider"
             ],
             "aliases": {
-                "MingCrypt": "ShaoZeMing\\LaravelCrypt\\Facade\\Crypt"
+                "Crypt": "ShaoZeMing\\LaravelCrypt\\Facade\\Crypt"
             }
         }
     },
